@@ -59,3 +59,13 @@ int main() {
     memory_block *block3 = allocate_memory(BLOCK_SIZE);
     return 0;
 }
+// The code does not handle fragmentation of memory, it only merges adjacent free blocks, but does not split allocated blocks to minimize fragmentation.
+// The code does not handle memory alignment, it could be a problem for some systems.
+// The code does not handle out of memory situations, it only prints an error message and returns NULL, but it could be improved by implementing a custom memory allocation failure handler.
+// The code does not handle multi-threading, it could cause race conditions if multiple threads are trying to allocate or free memory at the same time.
+// The code does not handle memory leaks, it would be helpful to have some mechanism to track the allocated blocks and check if they have been freed before the program exits.
+// The code does not handle cases when the user requests memory more than the size of the memory block.
+// The code does not handle cases when the user requests memory less than the size of the memory block.
+// The code does not handle cases when the user requests memory less than the size of the memory block, but the memory block is smaller than the requested size.
+// The code does not handle cases when the user requests memory more than the size of the memory block, but the memory block is larger than the requested size.
+// The code does not handle cases when the user requests memory equal to the size of the memory block.
