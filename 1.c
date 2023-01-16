@@ -1,3 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define BLOCK_SIZE 4096 // size of each memory block
+
 typedef struct memory_block {
     size_t size;
     int status; // 0 = free, 1 = allocated
